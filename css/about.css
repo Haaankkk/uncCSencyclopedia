@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap');
+
+body {
+    background: linear-gradient(to right,#1e96fc, #a2d6f9);
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+.text {
+    width: 98%;
+    margin: 0rem auto;
+}
