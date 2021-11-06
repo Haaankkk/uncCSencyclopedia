@@ -13,7 +13,6 @@ body {
     grid-area: first;
     width: 100%;
     margin: 0rem auto;
-    /* border-radius: 10px; */
     font-family: 'Mochiy Pop One', sans-serif;
 }
 
@@ -25,7 +24,7 @@ h1 {
 
 h2 {
     width: 95%;
-    margin: 0rem auto;
+    margin: 1rem auto;
     text-align: center;
     font-size: 20px;
 }
