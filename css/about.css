@@ -2,25 +2,36 @@
 
 body {
     background: linear-gradient(to right,#000080,#800080);
-    font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'Optima', sans-serif;
 }
 
 h1 {
-    font-size: 26px;
+    font-family: "Blippo", fantasy;
+    font-size: 48px;
     color: aliceblue;
+    text-align: center;
 }
 
+h2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold
+}
+p {
+    font-size: 20px;
+    text-align: center;
+}
 .text {
-    width: 98%;
-    margin: 0rem auto;
+    width: 90%;
+    margin: 0rem auto
 }
 
 .menu {
-    width: 98%;
+    width: 90%;
     margin: 0rem auto;
 }
 
 .return {
-    width: 98%;
+    width: 90%;
     margin: 0rem auto;
 }
