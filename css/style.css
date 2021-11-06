@@ -47,6 +47,11 @@ h2 {
     margin: 1rem auto;
 }
 
+.return {
+    width: 90%;
+    margin: 1rem auto;
+}
+
 .btn {
     left: 50px;
 }

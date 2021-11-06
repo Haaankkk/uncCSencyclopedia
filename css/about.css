@@ -27,11 +27,19 @@ p {
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     width: 90%;
     margin: 0rem auto;
 }
 
 .return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90%;
-    margin: 0rem auto;
+    margin: 1rem auto;
+    font-size: 20px;
 }
