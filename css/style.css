@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap');
 
 body {
-    background: linear-gradient(to right,#1e96fc, #a2d6f9);
+    background: linear-gradient(to right,#000080,#800080);
     display: grid;
     grid-template-rows: 3fr 9fr 1fr;
     grid-template-areas: "first"
