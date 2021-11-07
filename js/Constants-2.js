@@ -27,6 +27,7 @@ function getNormalizedScore(probability) {
 
 //MARK: Classes
 const KMP_NAME = 'KMP';
+const TESSA_NAME = 'Tessa Joseph-Nicolas'
 //attribute list is map {questionID: bool}
 class Professor {
     constructor(
@@ -51,7 +52,7 @@ const QuestionKeys = {
     IS_THIS_PROFESSOR_A_MALE: 'IS_THIS_PROFESSOR_A_MALE',
     IS_HE_WEARING_GLASS: 'IS_HE_WEARING_GLASS',
     IS_HE_ABOVE_50: 'IS_HE_ABOVE_50',
-    IS_HE_ASIAN: 'IS_HE_INDIAN',
+    IS_HE_ASIAN: 'IS_HE_ASIAN',
     ARE_YOU_TAKING_NEXT_SEMESTER: 'ARE_YOU_TAKING_NEXT_SEEMSTER',
     DOES_HE_LIKE_TELLING_STORIES: 'DOES_HE_LIKE_TELLING_STORIES',
     DOES_HE_HAVE_HIS_OWN_WEBSITE: 'DOES_HE_HAVE_HIS_OWN_WEBSITE',
@@ -112,7 +113,7 @@ class GameManager {
         A_KMP.set(QuestionKeys.ARE_HIS_COURSES_DIFFCULT, ATTRIBUTE_VALUES.A_LITTLE_LIKELY);
         A_KMP.set(QuestionKeys.DOES_HE_USE_SOCIAL_MEDIA_FREQUENTLY, ATTRIBUTE_VALUES.FALSE);
 
-        const P_KMP = new Professor(KMP_NAME, A_KMP);
+        const P_KMP = new Professor('Ketan Mayer-Patel', A_KMP, ['Is he director of undergraduate CS']);
 
 
         const A_AS = new Map();
@@ -239,7 +240,7 @@ class GameManager {
         const A_TJ = new Map();
         A_TJ.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.FALSE);
 
-        const P_TJ = new Professor('Tessa Joseph-Nicolas', A_TJ);
+        const P_TJ = new Professor(TESSA_NAME, A_TJ);
 
         const A_MS = new Map();
         A_MS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);

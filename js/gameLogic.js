@@ -6,45 +6,26 @@ let playAgainButton;
 
 let professorsLeftList;
 let gameSectionDiv;
+var gameManager;
 
 const debug = false;
 
 $(() => {
-    var gameSectionDiv = $('.secondSection');
-    const gameBGHeight = window.innerWidth * 0.84;
-    gameSectionDiv.css({ height: gameBGHeight });
-    var gameManager = new GameManager();
-    questionPrompt = $('#question-prompt');
-    buttonsSection = $('#buttons-section');
-
-    yesButton = $('#yes-button');
-    noButton = $('#no-button');
-    playAgainButton = $('#play-again-button');
-    playAgainButton.hide();
-
-    professorsLeftList = $('#professors-left');
-    debug && professorsLeftList.html(JSON.stringify(gameManager.professorsLeft))
-
-    questionPrompt.html(Questions.get(gameManager.nextQuestion));
-
-    yesButton.on('click', () => {
-        onButtonClicked(true);
-    });
-
-    noButton.on('click', () => {
-        onButtonClicked(false)
-    });
-
-    playAgainButton.on('click', () => {
-        onPlayAgain();
-    })
-
-    function onPlayAgain() {
+    function startUp() {
+        gameSectionDiv = $('.secondSection');
+        const gameBGHeight = window.innerWidth * 0.84;
+        gameSectionDiv.css({ height: gameBGHeight });
         gameManager = new GameManager();
-        questionPrompt.html(Questions.get(gameManager.nextQuestion));
-        yesButton.show();
-        noButton.show();
+        questionPrompt = $('#question-prompt');
+        buttonsSection = $('#buttons-section');
+
+        yesButton = $('#yes-button');
+        noButton = $('#no-button');
+        playAgainButton = $('#play-again-button');
         playAgainButton.hide();
+
+        questionPrompt.html(Questions.get(gameManager.nextQuestion));
+
         yesButton.on('click', () => {
             onButtonClicked(true);
         });
@@ -52,6 +33,23 @@ $(() => {
         noButton.on('click', () => {
             onButtonClicked(false)
         });
+
+        playAgainButton.on('click', () => {
+            onPlayAgain();
+        })
+    }
+
+    startUp();
+
+
+
+    function onPlayAgain() {
+        // startUp();
+        // yesButton.show();
+        // noButton.show();
+        // playAgainButton.hide();
+        location.reload();
+
     }
 
     function onButtonClicked(yes = true) {
@@ -146,8 +144,6 @@ $(() => {
             }
         });
 
-        debug && professorsLeftList.html(JSON.stringify(gameManager.professorsLeft));
-
         if (checkIfFinished()) {
             return;
         }
@@ -157,6 +153,9 @@ $(() => {
     }
 
     function checkIfFinished() {
+        if (gameManager.professorsLeft.length === 0) {
+            onPlayAgain();
+        }
         //only one left, end game
         if (gameManager.professorsLeft.length === 1) {
             if (gameManager.professorsLeft[0].name === KMP_NAME) {
@@ -221,7 +220,12 @@ $(() => {
                 if (isKMP) {
                     questionPrompt.html(`He is me!`);
                 } else {
-                    questionPrompt.html(`He is ${gameManager.professorsLeft[0].name}!`);
+                    if (theProfessor.name === TESSA_NAME) {
+                        questionPrompt.html(`She is ${gameManager.professorsLeft[0].name}!`);
+                    } else {
+                        questionPrompt.html(`He is ${gameManager.professorsLeft[0].name}!`);
+                    }
+
                 }
 
                 yesButton.hide();
