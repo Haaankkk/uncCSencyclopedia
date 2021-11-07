@@ -3,7 +3,7 @@
 body {
     background: linear-gradient(to right,#000080,#800080);
     display: grid;
-    grid-template-rows: 3fr 9fr 1fr;
+    grid-template-rows: 3fr 4.5fr 0.5fr;
     grid-template-areas: "first"
     "second"
     "third";
