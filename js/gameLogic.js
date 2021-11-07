@@ -45,6 +45,13 @@ $(() => {
         yesButton.show();
         noButton.show();
         playAgainButton.hide();
+        yesButton.on('click', () => {
+            onButtonClicked(true);
+        });
+
+        noButton.on('click', () => {
+            onButtonClicked(false)
+        });
     }
 
     function onButtonClicked(yes = true) {
@@ -196,9 +203,16 @@ $(() => {
             const theProfessor = gameManager.professorsLeft[0];
             if (theProfessor.specificQuestion.length > 0) {
                 //ask specific question
-                const index = Math.random() * theProfessor.specificQuestion.length / 1;
-                const question = theProfessor.specificQuestion[index]
-                questionPrompt.html(question)
+                const index = Math.floor(Math.random() * theProfessor.specificQuestion.length / 1);
+                const question = theProfessor.specificQuestion[index];
+                questionPrompt.html(question);
+                yesButton.on('click', () => {
+                    showEndGameUI();
+                });
+
+                noButton.on('click', () => {
+                    onPlayAgain();
+                });
             } else {
                 showEndGameUI();
             }
