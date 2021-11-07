@@ -11,7 +11,7 @@ Students may find themselves knowing better about their professors after playing
 
 Description of the Game:
 
-Before the game, users should keep one UNC professor in mind. 
+Before the game, users should keep one UNC CS professor in mind. 
 Once beginning the game, users are directed to answer several multiple-choice questions. 
 Our “thought-reading” Encyclopedia is (hopefully) able to guess who is the professor in your mind! 
 After several rounds of the game, 
