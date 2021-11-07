@@ -51,7 +51,7 @@ const QuestionKeys = {
     IS_THIS_PROFESSOR_A_MALE: 'IS_THIS_PROFESSOR_A_MALE',
     IS_HE_WEARING_GLASS: 'IS_HE_WEARING_GLASS',
     IS_HE_ABOVE_50: 'IS_HE_ABOVE_50',
-    IS_HE_INDIAN: 'IS_HE_INDIAN',
+    IS_HE_ASIAN: 'IS_HE_INDIAN',
     ARE_YOU_TAKING_NEXT_SEMESTER: 'ARE_YOU_TAKING_NEXT_SEEMSTER',
     DOES_HE_LIKE_TELLING_STORIES: 'DOES_HE_LIKE_TELLING_STORIES',
     DOES_HE_HAVE_HIS_OWN_WEBSITE: 'DOES_HE_HAVE_HIS_OWN_WEBSITE',
@@ -65,7 +65,7 @@ const QuestionKeys = {
 
 const Questions = new Map([
     [QuestionKeys.IS_THIS_PROFESSOR_A_MALE, 'Is this professor a male?'],
-    [QuestionKeys.IS_HE_INDIAN, 'Is he Indian?'],
+    [QuestionKeys.IS_HE_ASIAN, 'Is he Asian?'],
     [QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, 'Are you taking his class next semester?'],
     [QuestionKeys.IS_HE_WEARING_GLASS, 'Is he wearing glasses?'],
     [QuestionKeys.IS_HE_ABOVE_50, 'Is he above 50?'],
@@ -101,7 +101,7 @@ class GameManager {
 
         const A_KMP = new Map();
         A_KMP.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_KMP.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.TRUE);
+        A_KMP.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.TRUE);
         A_KMP.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_KMP.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_KMP.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -112,12 +112,12 @@ class GameManager {
         A_KMP.set(QuestionKeys.ARE_HIS_COURSES_DIFFCULT, ATTRIBUTE_VALUES.A_LITTLE_LIKELY);
         A_KMP.set(QuestionKeys.DOES_HE_USE_SOCIAL_MEDIA_FREQUENTLY, ATTRIBUTE_VALUES.FALSE);
 
-        const P_KMP = new Professor('Ketan Mayer-Patel', A_KMP);
+        const P_KMP = new Professor(KMP_NAME, A_KMP);
 
 
         const A_AS = new Map();
         A_AS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_AS.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_AS.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_AS.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_AS.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.FALSE);
         A_AS.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
@@ -133,7 +133,7 @@ class GameManager {
 
         const A_HF = new Map();
         A_HF.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_HF.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_HF.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_HF.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.FALSE);
         A_HF.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_HF.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -149,7 +149,7 @@ class GameManager {
 
         const A_JS = new Map();
         A_JS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_JS.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_JS.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_JS.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_JS.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_JS.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -163,7 +163,7 @@ class GameManager {
 
         const A_DS = new Map();
         A_DS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_DS.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_DS.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_DS.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_DS.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_DS.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
@@ -180,7 +180,7 @@ class GameManager {
 
         const A_CJ = new Map();
         A_CJ.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_CJ.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_CJ.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_CJ.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_CJ.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.FALSE);
         A_CJ.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
@@ -195,7 +195,7 @@ class GameManager {
 
         const A_BM = new Map();
         A_BM.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_BM.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_BM.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_BM.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_BM.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.A_LITTLE_UNLIKELY);
         A_BM.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -210,7 +210,7 @@ class GameManager {
 
         const A_JM = new Map();
         A_JM.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_JM.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_JM.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_JM.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_JM.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_JM.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.MODERATELY_LIKELY);
@@ -224,7 +224,7 @@ class GameManager {
 
         const A_JT = new Map();
         A_JT.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_JT.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_JT.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_JT.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_JT.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.FALSE);
         A_JT.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -243,7 +243,7 @@ class GameManager {
 
         const A_MS = new Map();
         A_MS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_MS.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.TRUE);
+        A_MS.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.TRUE);
         A_MS.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_MS.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.HIGHLY_LIKELY);
         A_MS.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -258,7 +258,7 @@ class GameManager {
 
         const A_MB = new Map();
         A_MB.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_MB.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.TRUE);
+        A_MB.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.TRUE);
         A_MB.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.FALSE);
         A_MB.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.FALSE);
         A_MB.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
@@ -271,7 +271,7 @@ class GameManager {
 
         const A_KJ = new Map();
         A_KJ.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_KJ.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_KJ.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_KJ.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_KJ.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.A_LITTLE_UNLIKELY);
         A_KJ.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
@@ -282,7 +282,7 @@ class GameManager {
 
         const A_GS = new Map();
         A_GS.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_GS.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_GS.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_GS.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_GS.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.FALSE);
         A_GS.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -296,7 +296,7 @@ class GameManager {
 
         const A_LM = new Map();
         A_LM.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_LM.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_LM.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_LM.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.TRUE);
         A_LM.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_LM.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.TRUE);
@@ -310,7 +310,7 @@ class GameManager {
 
         const A_DP = new Map();
         A_DP.set(QuestionKeys.IS_THIS_PROFESSOR_A_MALE, ATTRIBUTE_VALUES.TRUE);
-        A_DP.set(QuestionKeys.IS_HE_INDIAN, ATTRIBUTE_VALUES.FALSE);
+        A_DP.set(QuestionKeys.IS_HE_ASIAN, ATTRIBUTE_VALUES.FALSE);
         A_DP.set(QuestionKeys.ARE_YOU_TAKING_NEXT_SEMESTER, ATTRIBUTE_VALUES.FALSE);
         A_DP.set(QuestionKeys.IS_HE_ABOVE_50, ATTRIBUTE_VALUES.TRUE);
         A_DP.set(QuestionKeys.IS_HE_WEARING_GLASS, ATTRIBUTE_VALUES.FALSE);
