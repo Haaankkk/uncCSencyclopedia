@@ -42,7 +42,7 @@ h2 {
     position: relative;
     grid-area: second;
     width: 100%;
-    height:auto;
+    height: auto;
     background-color: white;
     align-items: center;
     text-align: center;
@@ -89,4 +89,20 @@ h2 {
     font-size: 20px;
     margin-top: 50px;
     font-family: 'Optima', sans-serif;
+}
+
+#question-prompt {
+    font-size: 36px;
+}
+
+button {
+    padding: 2rem 5rem;
+    font-size: 24px;
+    border-radius: 10px;
+    border: transparent;
+}
+
+button:hover {
+    background-color: yellow;
+    cursor: pointer;
 }
