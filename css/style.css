@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap');
 
 body {
+    position: relative;
     background: linear-gradient(to right,#000080,#800080);
     display: grid;
     grid-template-rows: 3fr 4.5fr 0.5fr;
@@ -38,8 +39,13 @@ h2 {
 }
 
 .secondSection {
+    position: relative;
     grid-area: second;
+    width: 100%;
+    height:auto;
     background-color: white;
+    align-items: center;
+    text-align: center;
 }
 
 .menu {
@@ -62,5 +68,25 @@ h2 {
     justify-content: center;
     background-color: #ceeaf7;
     align-items: center;
+    font-family: 'Optima', sans-serif;
+}
+
+#game-background-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#game-section {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+    font-size: 20px;
+    margin-top: 50px;
     font-family: 'Optima', sans-serif;
 }
